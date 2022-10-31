@@ -16,6 +16,15 @@ public protocol OptionalProtocol {
 }
 
 ///
+public extension OptionalProtocol {
+    
+    ///
+    var asOptional: Optional<Wrapped> {
+        self.wrappedValue
+    }
+}
+
+///
 extension Optional: OptionalProtocol {
     
     ///
